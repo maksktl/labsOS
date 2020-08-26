@@ -28,9 +28,12 @@ void sqr(int n){
     }
 }
 
-int main(){
+int main(int argc, char *argv[]){
     int n;
-    scanf("%d:", &n);
+    if(sscanf(argv[1], "%d", &n) != 1){
+	printf("Error");
+	return -1;
+    }
     printf("Type:\n1 for piramid\n2 for triangle\n3 for square\n");
     int type;
     scanf("%d", &type);
